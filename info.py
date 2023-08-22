@@ -36,7 +36,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001962622157')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -48,7 +48,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 #maximum search result buttos count in number#
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
-START_MESSAGE = environ.get('START_MESSAGE', '👋💙 𝙷𝙴𝙻𝙾 {user}\n\nMʏ Nᴀᴍᴇ Iꜱ {bot},\nI Cᴀɴ Pʀᴏᴠɪᴅᴇ Lᴀᴛᴇꜱᴛ Tʜᴇᴀᴛʀᴇ Mᴏᴠɪᴇꜱ Hᴇʀᴇ... Jᴜꜱᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ / Jᴜꜱᴛ Aꜱᴋ Mᴏᴠɪᴇ Hᴇʀᴇ...\n\nIꜰ Yᴏᴜ Wᴀɴᴛ ʜᴅ Mᴏᴠɪᴇꜱ, Tʜᴇɴ Aꜱᴋ Hᴇʀᴇ @Waldy_Writingss_SearchBot...\n\nBᴏᴛ Mᴀᴅᴇ Bʏ @Waldy_Writings 💙🙇‍♂️')
+START_MESSAGE = environ.get('START_MESSAGE', '👋💙 𝙷𝙴𝙻𝙾 {user}\n\nMʏ Nᴀᴍᴇ Iꜱ {bot},\nI Cᴀɴ Pʀᴏᴠɪᴅᴇ Lᴀᴛᴇꜱᴛ Tʜᴇᴀᴛʀᴇ Mᴏᴠɪᴇꜱ Hᴇʀᴇ... Jᴜꜱᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ Oʀ Jᴜꜱᴛ Aꜱᴋ Mᴏᴠɪᴇ Hᴇʀᴇ...\n\nIꜰ Yᴏᴜ Wᴀɴᴛ Pɪʀᴀᴄʏ Mᴏᴠɪᴇꜱ, Tʜᴇɴ Aꜱᴋ Hᴇʀᴇ @Waldy_Piracy_Search_Bot...\n\nBᴏᴛ Mᴀᴅᴇ Bʏ @Waldy_Writings 💙🙇‍♂️')
 BUTTON_LOCK_TEXT = environ.get("BUTTON_LOCK_TEXT", "⚠️ 𝙃𝙚𝙮 {query}! 𝙏𝙝𝙖𝙩'𝙨 𝙉𝙤𝙩 𝙁𝙤𝙧 𝙔𝙤𝙪. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙊𝙬𝙣")
 FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', '𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑻𝒉𝒊𝒔 𝑩𝒐𝒕!')
 RemoveBG_API = environ.get("RemoveBG_API", "UvoyejFaX6Y4fnNsRDkCPAwq")
